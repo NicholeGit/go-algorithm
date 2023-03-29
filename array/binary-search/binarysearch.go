@@ -1,6 +1,6 @@
 package binary_search
 
-//使用 [l,r] 不变式
+//使用 [l,r] 循环不变量
 func search1(nums []int, target int) int {
 	//[l,r]
 	l, r := 0, len(nums)-1
@@ -18,7 +18,7 @@ func search1(nums []int, target int) int {
 	return -1
 }
 
-//	使用 [l,r) 不变式
+//	使用 [l,r) 循环不变量
 func search2(nums []int, target int) int {
 	l, r := 0, len(nums)
 	for l < r { // [1:2)
